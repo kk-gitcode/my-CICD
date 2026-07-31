@@ -1,4 +1,4 @@
-name: Generate functions
+name: Strings functions
 on: push
 jobs:
   generate:
