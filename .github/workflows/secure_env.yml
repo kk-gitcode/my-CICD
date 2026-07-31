@@ -1,0 +1,9 @@
+name: secure environment variables
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      ACTOR: ${{ github.actor }} # コンテキストの値を環境変数へセット(特殊文字対策。一旦環境変数へわたす)
+    steps:
+      - run: echo "${ACTOR}"     # 環境変数経由でコンテキストのプロパティを参照。トークン分割やパス名展開が抑止
