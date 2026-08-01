@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: printenv | grep '_FUNC'
-        ##continue-on-error: true
+        ## continue-on-error: true
       - run: echo "${CONTEXT}"
         if: ${{ failure() }} # エラーが発生しても、failure関数があるので実行される
         env:
